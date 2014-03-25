@@ -9,12 +9,7 @@ theme_update(panel.background=element_blank(),
 
 text.size <- 3.5
 
-if(file.exists('NYSEnrollment.Rda')) {
-	load('NYSEnrollment.Rda')
-} else {
-	source('dataload.R')
-	save(nysenrollment, district.codes, grade.cols, file='NYSEnrollment.Rda')
-}
+load('NYSEnrollment.Rda')
 
 groups <- c('All'='All Students', 
 			'Gender'='Gender',

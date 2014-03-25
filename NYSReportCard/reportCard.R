@@ -1,17 +1,8 @@
 require(Hmisc)
 
 if(!exists('nysrc2012') | !exists('nysrc2013')) {
-	if(exists('NYSReportCardCache.Rda')) {
-		load('NYSReportCardCache.Rda')
-	} else {
-		# NYS Report Card Database https://reportcards.nysed.gov/
-		nysrc2012 <- mdb.get('Data/2012SRC20140227.mdb')
-		# ELA and Math scores for 2013 http://www.p12.nysed.gov/irs/pressRelease/20130807/home.html
-		nysrc2013 <- mdb.get('Data/2013ELAandMathDistrictandBuildingAggregatesCountyMediaVs2003.mdb')
-		save(nysrc2012, nysrc2013, file='NYSReportCardCache.Rda')
-	}	
+	load('NYSReportCardCache.Rda')
 }
-
 
 schools <- unique(nysrc2013[[2]][,'NAME'])
 districts <- unique(nysrc2013[[2]][,'DISTRICT.N'])

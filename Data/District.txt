@@ -1,0 +1,765 @@
+010100   Albany City SD
+010201   Berne-Knox-Westerlo CSD
+010306   Bethlehem CSD
+010402   Ravena-Coeymans-Selkirk CSD
+010500   Cohoes City SD
+010601   South Colonie CSD
+010615   Menands UFSD
+010623   North Colonie CSD
+010701   Green Island UFSD
+010802   Guilderland CSD
+011003   Voorheesville CSD
+011200   Watervliet City SD
+019000   Capital Region Boces
+020101   Alfred-Almond CSD
+020601   Andover CSD
+020702   Genesee Valley CSD
+020801   Belfast CSD
+021102   Canaseraga CSD
+021601   Friendship CSD
+022001   Fillmore CSD
+022101   Whitesville CSD
+022302   Cuba-Rushford CSD
+022401   Scio CSD
+022601   Wellsville CSD
+022902   Bolivar-Richburg CSD
+030101   Chenango Forks CSD
+030200   Binghamton City SD
+030201   South Mountain-Hickory Comn SD At Bi
+030501   Harpursville CSD
+030601   Susquehanna Valley CSD
+030701   Chenango Valley CSD
+031101   Maine-Endwell CSD
+031301   Deposit CSD
+031401   Whitney Point CSD
+031501   Union-Endicott CSD
+031502   Johnson City CSD
+031601   Vestal CSD
+031701   Windsor CSD
+039000   Broome-Delaware-Tioga Boces
+040204   West Valley CSD
+040302   Allegany-Limestone CSD
+040901   Ellicottville CSD
+041101   Franklinville CSD
+041401   Hinsdale CSD
+042302   Cattaraugus-Little Valley CSD
+042400   Olean City SD
+042801   Gowanda CSD
+042901   Portville CSD
+043001   Randolph CSD
+043011   Randolph Acad UFSD
+043200   Salamanca City SD
+043501   Yorkshire-Pioneer CSD
+049000   Cattar-Allegany-Erie-Wyoming Boces
+050100   Auburn City SD
+050301   Weedsport CSD
+050401   Cato-Meridian CSD
+050701   Southern Cayuga CSD
+051101   Port Byron CSD
+051301   Moravia CSD
+051901   Union Springs CSD
+059000   Cayuga-Onondaga Boces
+060201   Southwestern CSD At Jamestown
+060301   Frewsburg CSD
+060401   Cassadaga Valley CSD
+060503   Chautauqua Lake CSD
+060601   Pine Valley CSD (South Dayton)
+060701   Clymer CSD
+060800   Dunkirk City SD
+061001   Bemus Point CSD
+061101   Falconer CSD
+061501   Silver Creek CSD
+061503   Forestville CSD
+061601   Panama CSD
+061700   Jamestown City SD
+062201   Fredonia CSD
+062301   Brocton CSD
+062401   Ripley CSD
+062601   Sherman CSD
+062901   Westfield CSD
+070600   Elmira City SD
+070901   Horseheads CSD
+070902   Elmira Heights CSD
+080101   Afton CSD
+080201   Bainbridge-Guilford CSD
+080601   Greene CSD
+081003   Unadilla Valley CSD
+081200   Norwich City SD
+081401   Georgetown-South Otselic CSD
+081501   Oxford Academy & CSD
+082001   Sherburne-Earlville CSD
+090201   Ausable Valley CSD
+090301   Beekmantown CSD
+090501   Northeastern Clinton CSD
+090601   Chazy UFSD
+090901   Northern Adirondack CSD
+091101   Peru CSD
+091200   Plattsburgh City SD
+091402   Saranac CSD
+099000   Clinton-Essex-Warren-Washing Boces
+100308   Berkshire UFSD
+100501   Taconic Hills CSD
+100902   Germantown CSD
+101001   Chatham CSD
+101300   Hudson City SD
+101401   Kinderhook CSD
+101601   New Lebanon CSD
+110101   Cincinnatus CSD
+110200   Cortland City SD
+110304   McGraw CSD
+110701   Homer CSD
+110901   Marathon CSD
+120102   Andes CSD
+120301   Downsville CSD
+120401   Charlotte Valley CSD
+120501   Delaware Academy CSD At Delhi
+120701   Franklin CSD
+120906   Hancock CSD
+121401   Margaretville CSD
+121502   Roxbury CSD
+121601   Sidney CSD
+121701   Stamford CSD
+121702   South Kortright CSD
+121901   Walton CSD
+129000   Delaw-Chenango-Madison-Otsego Boces
+130200   Beacon City SD
+130502   Dover UFSD
+130801   Hyde Park CSD
+131101   Northeast CSD
+131201   Pawling CSD
+131301   Pine Plains CSD
+131500   Poughkeepsie City SD
+131601   Arlington CSD
+131602   Spackenkill UFSD
+131701   Red Hook CSD
+131801   Rhinebeck CSD
+132101   Wappingers CSD
+132201   Millbrook CSD
+139000   Dutchess Boces
+140101   Alden CSD
+140201   Amherst CSD
+140203   Williamsville CSD
+140207   Sweet Home CSD
+140301   East Aurora UFSD
+140600   Buffalo City SD
+140701   Cheektowaga CSD
+140702   Cheektowaga-Maryvale UFSD
+140703   Cleveland Hill UFSD
+140707   Depew UFSD
+140709   Cheektowaga-Sloan UFSD
+140801   Clarence CSD
+141101   Springville-Griffith Inst CSD
+141201   Eden CSD
+141301   Iroquois CSD
+141401   Evans-Brant CSD (Lake Shore)
+141501   Grand Island CSD
+141601   Hamburg CSD
+141603   Hopevale UFSD At Hamburg
+141604   Frontier CSD
+141701   Holland CSD
+141800   Lackawanna City SD
+141901   Lancaster CSD
+142101   Akron CSD
+142201   North Collins CSD
+142301   Orchard Park CSD
+142500   Tonawanda City SD
+142601   Kenmore-Tonawanda UFSD
+142801   West Seneca CSD
+149100   Erie 1 Boces
+149200   Erie 2-Chautauqua-Cattaraugus Boces
+150203   Crown Point CSD
+150301   Elizabethtown-Lewis CSD
+150601   Keene CSD
+150801   Minerva CSD
+150901   Moriah CSD
+151001   Newcomb CSD
+151102   Lake Placid CSD
+151401   Schroon Lake CSD
+151501   Ticonderoga CSD
+151601   Westport CSD
+151701   Willsboro CSD
+160101   Tupper Lake CSD
+160801   Chateaugay CSD
+161201   Salmon River CSD
+161401   Saranac Lake CSD
+161501   Malone CSD
+161601   Brushton-Moira CSD
+161801   St Regis Falls CSD
+169000   Franklin-Essex-Hamilton Boces
+170301   Wheelerville UFSD
+170500   Gloversville City SD
+170600   Johnstown City SD
+170801   Mayfield CSD
+170901   Northville CSD
+171102   Broadalbin-Perth CSD
+180202   Alexander CSD
+180300   Batavia City SD
+180701   Byron-Bergen CSD
+180901   Elba CSD
+181001   Le Roy CSD
+181101   Oakfield-Alabama CSD
+181201   Pavilion CSD
+181302   Pembroke CSD
+190301   Cairo-Durham CSD
+190401   Catskill CSD
+190501   Coxsackie-Athens CSD
+190701   Greenville CSD
+190901   Hunter-Tannersville CSD
+191401   Windham-Ashland-Jewett CSD
+199000   Otsego-Delaw-Schoharie-Greene Boces
+200101   Piseco Comn SD
+200401   Indian Lake CSD
+200501   Inlet Comn SD
+200601   Lake Pleasant CSD
+200701   Long Lake CSD
+200702   Raquette Lake UFSD
+200901   Wells CSD
+209000   Hamilton-Fulton-Montgomery Boces
+210302   West Canada Valley CSD
+210402   Frankfort-Schuyler CSD
+210601   Herkimer CSD
+210800   Little Falls City SD
+211003   Dolgeville CSD
+211103   Poland CSD
+211701   Van Hornesville-Owen D Young CSD
+211901   Town Of Webb UFSD
+212001   Mount Markham CSD
+212101   Central Valley CSD At Ilion-Mohawk
+219000   Herk-Fulton-Hamilton-Otsego Boces
+220101   South Jefferson CSD
+220202   Alexandria CSD
+220301   Indian River CSD
+220401   General Brown CSD
+220701   Thousand Islands CSD
+220909   Belleville Henderson CSD
+221001   Sackets Harbor CSD
+221301   Lyme CSD
+221401   La Fargeville CSD
+222000   Watertown City SD
+222201   Carthage CSD
+229000   Jeffer-Lewis-Hamil-Herk-Oneida Boces
+230201   Copenhagen CSD
+230301   Harrisville CSD
+230901   Lowville Academy & CSD
+231101   South Lewis CSD
+231301   Beaver River CSD
+240101   Avon CSD
+240201   Caledonia-Mumford CSD
+240401   Geneseo CSD
+240801   Livonia CSD
+240901   Mt Morris CSD
+241001   Dansville CSD
+241101   Dalton-Nunda CSD (Keshequa)
+241701   York CSD
+249000   Genesee Valley Boces
+250109   Brookfield CSD
+250201   Cazenovia CSD
+250301   Deruyter CSD
+250401   Morrisville-Eaton CSD
+250701   Hamilton CSD
+250901   Canastota CSD
+251101   Madison CSD
+251400   Oneida City SD
+251501   Stockbridge Valley CSD
+251601   Chittenango CSD
+259000   Madison-Oneida Boces
+260101   Brighton CSD
+260401   Gates-Chili CSD
+260501   Greece CSD
+260801   East Irondequoit CSD
+260803   West Irondequoit CSD
+260901   Honeoye Falls-Lima CSD
+261001   Spencerport CSD
+261101   Hilton CSD
+261201   Penfield CSD
+261301   Fairport CSD
+261313   East Rochester UFSD
+261401   Pittsford CSD
+261501   Churchville-Chili CSD
+261600   Rochester City SD
+261701   Rush-Henrietta CSD
+261801   Brockport CSD
+261901   Webster CSD
+262001   Wheatland-Chili CSD
+269100   Monroe 1 Boces
+269200   Monroe 2-Orleans Boces
+270100   Amsterdam City SD
+270301   Canajoharie CSD
+270601   Fonda-Fultonville CSD
+270701   Fort Plain CSD
+271201   Oppenheim-Ephratah-St. Johnsville Cs
+280100   Glen Cove City SD
+280201   Hempstead UFSD
+280202   Uniondale UFSD
+280203   East Meadow UFSD
+280204   North Bellmore UFSD
+280205   Levittown UFSD
+280206   Seaford UFSD
+280207   Bellmore UFSD
+280208   Roosevelt UFSD
+280209   Freeport UFSD
+280210   Baldwin UFSD
+280211   Oceanside UFSD
+280212   Malverne UFSD
+280213   Valley Stream 13 UFSD
+280214   Hewlett-Woodmere UFSD
+280215   Lawrence UFSD
+280216   Elmont UFSD
+280217   Franklin Square UFSD
+280218   Garden City UFSD
+280219   East Rockaway UFSD
+280220   Lynbrook UFSD
+280221   Rockville Centre UFSD
+280222   Floral Park-Bellerose UFSD
+280223   Wantagh UFSD
+280224   Valley Stream 24 UFSD
+280225   Merrick UFSD
+280226   Island Trees UFSD
+280227   West Hempstead UFSD
+280229   North Merrick UFSD
+280230   Valley Stream 30 UFSD
+280231   Island Park UFSD
+280251   Valley Stream Central HS District
+280252   Sewanhaka Central HS District
+280253   Bellmore-Merrick Central HS District
+280300   Long Beach City SD
+280401   Westbury UFSD
+280402   East Williston UFSD
+280403   Roslyn UFSD
+280404   Port Washington UFSD
+280405   New Hyde Park-Garden City Park UFSD
+280406   Manhasset UFSD
+280407   Great Neck UFSD
+280409   Herricks UFSD
+280410   Mineola UFSD
+280411   Carle Place UFSD
+280501   North Shore CSD
+280502   Syosset CSD
+280503   Locust Valley CSD
+280504   Plainview-Old Bethpage CSD
+280506   Oyster Bay-East Norwich CSD
+280515   Jericho UFSD
+280517   Hicksville UFSD
+280518   Plainedge UFSD
+280521   Bethpage UFSD
+280522   Farmingdale UFSD
+280523   Massapequa UFSD
+289000   Nassau Boces
+300000   NYC Chancellor's Office
+307500   NYC Spec Schools - Dist 75
+310100   NYC Geog Dist # 1 - Manhattan
+310200   NYC Geog Dist # 2 - Manhattan
+310300   NYC Geog Dist # 3 - Manhattan
+310400   NYC Geog Dist # 4 - Manhattan
+310500   NYC Geog Dist # 5 - Manhattan
+310600   NYC Geog Dist # 6 - Manhattan
+320700   NYC Geog Dist # 7 - Bronx
+320800   NYC Geog Dist # 8 - Bronx
+320900   NYC Geog Dist # 9 - Bronx
+321000   NYC Geog Dist #10 - Bronx
+321100   NYC Geog Dist #11 - Bronx
+321200   NYC Geog Dist #12 - Bronx
+331300   NYC Geog Dist #13 - Brooklyn
+331400   NYC Geog Dist #14 - Brooklyn
+331500   NYC Geog Dist #15 - Brooklyn
+331600   NYC Geog Dist #16 - Brooklyn
+331700   NYC Geog Dist #17 - Brooklyn
+331800   NYC Geog Dist #18 - Brooklyn
+331900   NYC Geog Dist #19 - Brooklyn
+332000   NYC Geog Dist #20 - Brooklyn
+332100   NYC Geog Dist #21 - Brooklyn
+332200   NYC Geog Dist #22 - Brooklyn
+332300   NYC Geog Dist #23 - Brooklyn
+333200   NYC Geog Dist #32 - Brooklyn
+342400   NYC Geog Dist #24 - Queens
+342500   NYC Geog Dist #25 - Queens
+342600   NYC Geog Dist #26 - Queens
+342700   NYC Geog Dist #27 - Queens
+342800   NYC Geog Dist #28 - Queens
+342900   NYC Geog Dist #29 - Queens
+343000   NYC Geog Dist #30 - Queens
+353100   NYC Geog Dist #31 - Staten Island
+400301   Lewiston-Porter CSD
+400400   Lockport City SD
+400601   Newfane CSD
+400701   Niagara-Wheatfield CSD
+400800   Niagara Falls City SD
+400900   North Tonawanda City SD
+401001   Starpoint CSD
+401201   Royalton-Hartland CSD
+401301   Barker CSD
+401501   Wilson CSD
+410401   Adirondack CSD
+410601   Camden CSD
+411101   Clinton CSD
+411501   New Hartford CSD
+411504   NY Mills UFSD
+411603   Sauquoit Valley CSD
+411701   Remsen CSD
+411800   Rome City SD
+411902   Waterville CSD
+412000   Sherrill City SD
+412201   Holland Patent CSD
+412300   Utica City SD
+412801   Westmoreland CSD
+412901   Oriskany CSD
+412902   Whitesboro CSD
+419000   Oneida-Herkimer-Madison Boces
+420101   West Genesee CSD
+420303   North Syracuse CSD
+420401   East Syracuse-Minoa CSD
+420411   Jamesville-Dewitt CSD
+420501   Jordan-Elbridge CSD
+420601   Fabius-Pompey CSD
+420701   Westhill CSD
+420702   Solvay UFSD
+420807   Lafayette CSD
+420901   Baldwinsville CSD
+421001   Fayetteville-Manlius CSD
+421101   Marcellus CSD
+421201   Onondaga CSD
+421501   Liverpool CSD
+421504   Lyncourt UFSD
+421601   Skaneateles CSD
+421800   Syracuse City SD
+421902   Tully CSD
+429000   Onondaga-Cortland-Madison Boces
+430300   Canandaigua City SD
+430501   East Bloomfield CSD
+430700   Geneva City SD
+430901   Gorham-Middlesex CSD (Marcus Whitman
+431101   Manchester-Shortsville CSD (Red Jack
+431201   Naples CSD
+431301   Phelps-Clifton Springs CSD
+431401   Honeoye CSD
+431701   Victor CSD
+439000   Wayne-Finger Lakes Boces
+440102   Washingtonville CSD
+440201   Chester UFSD
+440301   Cornwall CSD
+440401   Pine Bush CSD
+440601   Goshen CSD
+440901   Highland Falls CSD
+441000   Middletown City SD
+441101   Minisink Valley CSD
+441201   Monroe-Woodbury CSD
+441202   Kiryas Joel Village UFSD
+441301   Valley CSD (Montgomery)
+441600   Newburgh City SD
+441800   Port Jervis City SD
+441903   Tuxedo UFSD
+442101   Warwick Valley CSD
+442111   Greenwood Lake UFSD
+442115   Florida UFSD
+449000   Orange-Ulster Boces
+450101   Albion CSD
+450607   Kendall CSD
+450704   Holley CSD
+450801   Medina CSD
+451001   Lyndonville CSD
+459000   Orleans-Niagara Boces
+460102   Altmar-Parish-Williamstown CSD
+460500   Fulton City SD
+460701   Hannibal CSD
+460801   Central Square CSD
+460901   Mexico CSD
+461300   Oswego City SD
+461801   Pulaski CSD
+461901   Sandy Creek CSD
+462001   Phoenix CSD
+469000   Oswego Boces
+470202   Gilbertsville-Mount Upton CSD
+470501   Edmeston CSD
+470801   Laurens CSD
+470901   Schenevus CSD
+471101   Milford CSD
+471201   Morris CSD
+471400   Oneonta City SD
+471601   Otego-Unadilla CSD
+471701   Cooperstown CSD
+472001   Richfield Springs CSD
+472202   Cherry Valley-Springfield CSD
+472506   Worcester CSD
+480101   Mahopac CSD
+480102   Carmel CSD
+480401   Haldane CSD
+480404   Garrison UFSD
+480503   Putnam Valley CSD
+480601   Brewster CSD
+489000   Putnam-Northern Westchester Boces
+490101   Berlin CSD
+490202   Brunswick CSD (Brittonkill)
+490301   East Greenbush CSD
+490501   Hoosick Falls CSD
+490601   Lansingburgh CSD
+490801   North Greenbush Comn SD (Williams)
+490804   Wynantskill UFSD
+491200   Rensselaer City SD
+491302   Averill Park CSD
+491401   Hoosic Valley CSD
+491501   Schodack CSD
+491700   Troy City SD
+499000   Questar III (R-C-G) Boces
+500101   Clarkstown CSD
+500108   Nanuet UFSD
+500201   Haverstraw-Stony Point CSD (North Ro
+500301   South Orangetown CSD
+500304   Nyack UFSD
+500308   Pearl River UFSD
+500401   Ramapo CSD (Suffern)
+500402   East Ramapo CSD (Spring Valley)
+509000   Rockland Boces
+510101   Brasher Falls CSD
+510201   Canton CSD
+510401   Clifton-Fine CSD
+510501   Colton-Pierrepont CSD
+511101   Gouverneur CSD
+511201   Hammond CSD
+511301   Hermon-Dekalb CSD
+511602   Lisbon CSD
+511901   Madrid-Waddington CSD
+512001   Massena CSD
+512101   Morristown CSD
+512201   Norwood-Norfolk CSD
+512300   Ogdensburg City SD
+512404   Heuvelton CSD
+512501   Parishville-Hopkinton CSD
+512902   Potsdam CSD
+513102   Edwards-Knox CSD
+519000   St Lawrence-Lewis Boces
+520101   Burnt Hills-Ballston Lake CSD
+520302   Shenendehowa CSD
+520401   Corinth CSD
+520601   Edinburg Common SD
+520701   Galway CSD
+521200   Mechanicville City SD
+521301   Ballston Spa CSD
+521401   South Glens Falls CSD
+521701   Schuylerville CSD
+521800   Saratoga Springs City SD
+522001   Stillwater CSD
+522101   Waterford-Halfmoon UFSD
+530101   Duanesburg CSD
+530202   Scotia-Glenville CSD
+530301   Niskayuna CSD
+530501   Schalmont CSD
+530515   Rotterdam-Mohonasen CSD
+530600   Schenectady City SD
+540801   Gilboa-Conesville CSD
+540901   Jefferson CSD
+541001   Middleburgh CSD
+541102   Cobleskill-Richmondville CSD
+541201   Schoharie CSD
+541401   Sharon Springs CSD
+550101   Odessa-Montour CSD
+550301   Watkins Glen CSD
+559000   Greater Southern Tier Boces
+560501   South Seneca CSD
+560603   Romulus CSD
+560701   Seneca Falls CSD
+561006   Waterloo CSD
+570101   Addison CSD
+570201   Avoca CSD
+570302   Bath CSD
+570401   Bradford CSD
+570603   Campbell-Savona CSD
+571000   Corning City SD
+571502   Canisteo-Greenwood CSD
+571800   Hornell City SD
+571901   Arkport CSD
+572301   Prattsburgh CSD
+572702   Jasper-Troupsburg CSD
+572901   Hammondsport CSD
+573002   Wayland-Cohocton CSD
+580101   Babylon UFSD
+580102   West Babylon UFSD
+580103   North Babylon UFSD
+580104   Lindenhurst UFSD
+580105   Copiague UFSD
+580106   Amityville UFSD
+580107   Deer Park UFSD
+580109   Wyandanch UFSD
+580201   Three Village CSD
+580203   Brookhaven-Comsewogue UFSD
+580205   Sachem CSD
+580206   Port Jefferson UFSD
+580207   Mt Sinai UFSD
+580208   Miller Place UFSD
+580209   Rocky Point UFSD
+580211   Middle Country CSD
+580212   Longwood CSD
+580224   Patchogue-Medford UFSD
+580232   William Floyd UFSD
+580233   Center Moriches UFSD
+580234   East Moriches UFSD
+580235   South Country CSD
+580301   East Hampton UFSD
+580302   Wainscott Comn SD
+580303   Amagansett UFSD
+580304   Springs UFSD
+580305   Sag Harbor UFSD
+580306   Montauk UFSD
+580401   Elwood UFSD
+580402   Cold Spring Harbor CSD
+580403   Huntington UFSD
+580404   Northport-East Northport UFSD
+580405   Half Hollow Hills CSD
+580406   Harborfields CSD
+580410   Commack UFSD
+580413   South Huntington UFSD
+580501   Bay Shore UFSD
+580502   Islip UFSD
+580503   East Islip UFSD
+580504   Sayville UFSD
+580505   Bayport-Blue Point UFSD
+580506   Hauppauge UFSD
+580507   Connetquot CSD
+580509   West Islip UFSD
+580512   Brentwood UFSD
+580513   Central Islip UFSD
+580514   Fire Island UFSD
+580601   Shoreham-Wading River CSD
+580602   Riverhead CSD
+580603   Little Flower UFSD
+580701   Shelter Island UFSD
+580801   Smithtown CSD
+580805   Kings Park CSD
+580901   Remsenburg-Speonk UFSD
+580902   Westhampton Beach UFSD
+580903   Quogue UFSD
+580905   Hampton Bays UFSD
+580906   Southampton UFSD
+580909   Bridgehampton UFSD
+580910   Sagaponack Comn SD
+580912   Eastport-South Manor CSD
+580913   Tuckahoe Comn SD
+580917   East Quogue UFSD
+581002   Oysterponds UFSD
+581004   Fishers Island UFSD
+581005   Southold UFSD
+581010   Greenport UFSD
+581012   Mattituck-Cutchogue UFSD
+581015   New Suffolk Comn SD
+589100   Eastern Suffolk Boces
+589300   Western Suffolk Boces
+590501   Fallsburg CSD
+590801   Eldred CSD
+590901   Liberty CSD
+591201   Tri-Valley CSD
+591301   Roscoe CSD
+591302   Livingston Manor CSD
+591401   Monticello CSD
+591502   Sullivan West CSD
+599000   Sullivan Boces
+600101   Waverly CSD
+600301   Candor CSD
+600402   Newark Valley CSD
+600601   Owego-Apalachin CSD
+600801   Spencer-Van Etten CSD
+600903   Tioga CSD
+610301   Dryden CSD
+610327   George Junior Republic UFSD
+610501   Groton CSD
+610600   Ithaca City SD
+610801   Lansing CSD
+610901   Newfield CSD
+611001   Trumansburg CSD
+619000   Tompkins-Seneca-Tioga Boces
+620202   West Park UFSD
+620600   Kingston City SD
+620803   Highland CSD
+620901   Rondout Valley CSD
+621001   Marlboro CSD
+621101   New Paltz CSD
+621201   Onteora CSD
+621601   Saugerties CSD
+621801   Wallkill CSD
+622002   Ellenville CSD
+629000   Ulster Boces
+630101   Bolton CSD
+630202   North Warren CSD
+630300   Glens Falls City SD
+630601   Johnsburg CSD
+630701   Lake George CSD
+630801   Hadley-Luzerne CSD
+630902   Queensbury UFSD
+630918   Glens Falls Comn SD
+631201   Warrensburg CSD
+640101   Argyle CSD
+640502   Fort Ann CSD
+640601   Fort Edward UFSD
+640701   Granville CSD
+640801   Greenwich CSD
+641001   Hartford CSD
+641301   Hudson Falls CSD
+641401   Putnam CSD
+641501   Salem CSD
+641610   Cambridge CSD
+641701   Whitehall CSD
+649000   Washing-Sara-War-Hamltn-Essex Boces
+650101   Newark CSD
+650301   Clyde-Savannah CSD
+650501   Lyons CSD
+650701   Marion CSD
+650801   Wayne CSD
+650901   Palmyra-MacEdon CSD
+650902   Gananda CSD
+651201   Sodus CSD
+651402   Williamson CSD
+651501   North Rose-Wolcott CSD
+651503   Red Creek CSD
+660101   Katonah-Lewisboro UFSD
+660102   Bedford CSD
+660202   Croton-Harmon UFSD
+660203   Hendrick Hudson CSD
+660301   Eastchester UFSD
+660302   Tuckahoe UFSD
+660303   Bronxville UFSD
+660401   UFSD-Tarrytowns
+660402   Irvington UFSD
+660403   Dobbs Ferry UFSD
+660404   Hastings-On-Hudson UFSD
+660405   Ardsley UFSD
+660406   Edgemont UFSD
+660407   Greenburgh CSD
+660409   Elmsford UFSD
+660410   Greenburgh-Graham UFSD
+660411   Greenburgh Eleven UFSD
+660412   Greenburgh-North Castle UFSD
+660413   Abbott UFSD
+660501   Harrison CSD
+660701   Mamaroneck UFSD
+660801   Mt Pleasant CSD
+660802   Pocantico Hills CSD
+660803   Hawthorne-Cedar Knolls UFSD
+660804   Mt Pleasant-Cottage UFSD
+660805   Valhalla UFSD
+660806   Mt Pleasant-Blythedale UFSD
+660809   Pleasantville UFSD
+660900   Mt Vernon School District
+661004   Chappaqua CSD
+661100   New Rochelle City SD
+661201   Byram Hills CSD
+661301   North Salem CSD
+661401   Ossining UFSD
+661402   Briarcliff Manor UFSD
+661500   Peekskill City SD
+661601   Pelham UFSD
+661800   Rye City SD
+661901   Rye Neck UFSD
+661904   Port Chester-Rye UFSD
+661905   Blind Brook-Rye UFSD
+662001   Scarsdale UFSD
+662101   Somers CSD
+662200   White Plains City SD
+662300   Yonkers City SD
+662401   Lakeland CSD
+662402   Yorktown CSD
+669000   Westchester Boces
+670201   Attica CSD
+670401   Letchworth CSD
+671002   Wyoming CSD
+671201   Perry CSD
+671501   Warsaw CSD
+680601   Penn Yan CSD
+680801   Dundee CSD

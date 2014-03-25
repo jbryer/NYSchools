@@ -5,12 +5,7 @@ require(shinyIncubator)
 require(ggplot2)
 require(reshape2)
 
-if(file.exists('NYSEnrollment.Rda')) {
-	load('NYSEnrollment.Rda')
-} else {
-	source('dataload.R')
-	save(nysenrollment, district.codes, grade.cols, file='NYSEnrollment.Rda')
-}
+load('NYSEnrollment.Rda')
 
 tmp <- nysenrollment[['All']]$charter
 charterDistricts <- tmp[!duplicated(tmp$District),c('District','DistrictName')]

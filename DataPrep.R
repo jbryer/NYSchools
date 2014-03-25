@@ -1,7 +1,23 @@
-require(gdata)
+source('package.R')
+package(c('Hmisc','gdata'))
 
+##### For the NYSReportCard Shiny App ##########################################
+# NYS Report Card 2012
+download.file('https://reportcards.nysed.gov/zip/SRC2012.zip', 'Data/SRC2012.zip', method='curl')
+unzip('Data/SRC2012.zip', exdir='Data/')
+nysrc2012 <- mdb.get('Data/2012SRC20140227.mdb')
+
+# ELA and Math scores for 2013 http://www.p12.nysed.gov/irs/pressRelease/20130807/home.html
+download.file(paste0('http://www.p12.nysed.gov/irs/ela-math/2013/',
+					 '2013ELAandMathDistrictandBuildingAggregatesCountyMediaVs2003.mdb'),
+			  'Data/2013ELAandMathDistrictandBuildingAggregatesCountyMediaVs2003.mdb')
+nysrc2013 <- mdb.get('Data/2013ELAandMathDistrictandBuildingAggregatesCountyMediaVs2003.mdb')
+
+# Will save the Rdata file in the Shiny App directory to make it self contained.
+save(nysrc2012, nysrc2013, file='NYSReportCard/NYSReportCardCache.Rda')
+
+##### For the NYSCharters Shiny App ############################################
 path <- 'Data/'
-
 nysenrollment <- list(
 	All=list(# All Students
 		charters = read.xls(paste0(path, '2013-Charters_All_Students.xls')),
@@ -29,7 +45,7 @@ nysenrollment <- list(
 	)
 )
 
-district.codes <- read.fwf(paste0(path, '../District.txt'), 
+district.codes <- read.fwf(paste0(path, 'District.txt'), 
 						   widths=c(6, -3, 100), header=FALSE,
 						   col.names=c('Code','DistrictName'),
 						   stringsAsFactors=FALSE, 
@@ -64,3 +80,5 @@ for(gr in seq_along(nysenrollment)) {
 	nysenrollment[[gr]]$charters <- charters
 	nysenrollment[[gr]]$publics <- publics
 }
+
+save(nysenrollment, district.codes, grade.cols, file='NYSCharters/NYSEnrollment.Rda')

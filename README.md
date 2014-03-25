@@ -7,6 +7,8 @@ This Github repository contains analysis of traditional and charter public schoo
 
 ### Shiny Apps
 
+Shiny is an R package maintained by [RStudio](http://rstudio.com/shiny) that allows for the development of web applications in [R](http://www.r-project.org).
+
 #### New York State 2013 PreK-12 School Enrollments
 
 The purpose of this app is to explore the differences between traditional and charter school attendance (in 2013) for various subgroups. Subgroups include: school district, students with disabilities, economically disadvantaged students. English language learners, race/ethnicity, and gender. Comparisons for all grade levels as well as by elementary, middle, and high school are provided where the enrollment for all schools is provided.
@@ -26,7 +28,7 @@ In 2013 New York administered the first versions of the English Language Arts (E
 
 This app was very much influenced by the [analysis done by Gary Rubinstein](http://garyrubinstein.teachforus.org/2013/08/09/driven-by-data/). However, a few additions were made. On the model tab, the results of a regression model predicting 2013 results from 2012 results is provided (note that you can specify either a linear or quadratic model).
 
-To run this app from Github, type the following command in R (note that this is an approximapte 38mb download):
+To run this app from Github, type the following command in R (note that this is an approximate 38mb download):
 
 ```
 shiny::runGitHub('NYSchools','jbryer',subdir='NYSReportCard')
