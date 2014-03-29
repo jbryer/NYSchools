@@ -36,7 +36,7 @@ To run this app from Github, type the following command in R (note that this is 
 shiny::runGitHub('NYSchools','jbryer',subdir='NYSReportCard')
 ```
 
-Or to run a hosted version, go to: [http://rstudio.bryer.org:8080/users/rstudio/NYSEnrollment/](http://rstudio.bryer.org:8080/users/rstudio/NYSReportCard/). Note that the availability of this app is not guaranteed.
+Or to run a hosted version, go to: [http://rstudio.bryer.org:8080/users/rstudio/NYSReportCard/](http://rstudio.bryer.org:8080/users/rstudio/NYSReportCard/). Note that the availability of this app is not guaranteed.
 
 ![Screen Shot of NYSReportCard Shiny App](Figures/NYSReportCardScreen.png)
 
