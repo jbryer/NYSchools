@@ -67,7 +67,7 @@ shinyServer(function(input, output) {
 		publics <- thedata$publics
 		districtName <- thedata$districtName
 		
-		if(input$grade == 'All') {
+		if(input$grade == 'All' | is.null(input$district) | input$district == 'All') {
 			thedata <- as.data.frame(rbind(
 				apply(publics[,c('PRE.K.FULL.DAY','KINDERGARTEN.FULL.DAY.',
 								 paste0('GRADE.', 1:12))], 2, sum),
@@ -97,7 +97,7 @@ shinyServer(function(input, output) {
 												thedata.melted2$School %in% tmp,], 
 							aes(x=School, group=Charter, fill=Charter, y=Enrollment)) +
 					geom_bar(stat='identity', position='dodge') +
-					facet_wrap(~ Grade, nrow=1) + coord_flip()
+					facet_wrap(~ Grade, nrow=1) + coord_flip() + xlab('')
 			} else if(input$grade == 'Middle') {
 				tmp <- thedata.melted2[thedata.melted2$Grade %in% c(6:8),]
 				tmp <- aggregate(tmp$Enrollment, by=list(tmp$School), FUN=sum)
@@ -106,7 +106,7 @@ shinyServer(function(input, output) {
 												thedata.melted2$School %in% tmp,], 
 							aes(x=School, group=Charter, fill=Charter, y=Enrollment)) +
 					geom_bar(stat='identity', position='dodge') +
-					facet_wrap(~ Grade, nrow=1) + coord_flip()
+					facet_wrap(~ Grade, nrow=1) + coord_flip() + xlab('')
 			} else if(input$grade == 'High') {
 				tmp <- thedata.melted2[thedata.melted2$Grade %in% c(9:12),]
 				tmp <- aggregate(tmp$Enrollment, by=list(tmp$School), FUN=sum)
@@ -115,7 +115,7 @@ shinyServer(function(input, output) {
 												thedata.melted2$School %in% tmp,], 
 							aes(x=School, group=Charter, fill=Charter, y=Enrollment)) +
 					geom_bar(stat='identity', position='dodge') +
-					facet_wrap(~ Grade, nrow=1) + coord_flip()
+					facet_wrap(~ Grade, nrow=1) + coord_flip() + xlab('')
 			}
 		}
 		

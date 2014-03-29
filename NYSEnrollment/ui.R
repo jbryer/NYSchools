@@ -35,13 +35,17 @@ shinyUI(pageWithSidebar(
 			selectInput(inputId='race', label='Race/Ethnicity',
 						choices=unique(nysenrollment[['Race']]$charters$SUBGROUP))
 		),
-		selectInput(input = 'grade', label = 'Grade Level:',
-					choices = c('All Grades' = 'All',
-								'Elementary' = 'Elementary',
-								'Middle School' = 'Middle',
-								'High School' = 'High')),
 		selectInput(input='district', label='District:',
 			choices = c('All Districts' = 'All', districts)),
+		conditionalPanel(
+			"input.district != 'All'",
+			selectInput(input = 'grade', label = 'Grade Level:',
+						choices = c('All Grades' = 'All',
+									'Elementary' = 'Elementary',
+									'Middle School' = 'Middle',
+									'High School' = 'High'),
+						selected='All')
+		),
 		br()
 	),
 	
