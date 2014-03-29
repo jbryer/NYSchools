@@ -17,7 +17,7 @@ nysrc2013 <- mdb.get('Data/2013ELAandMathDistrictandBuildingAggregatesCountyMedi
 save(nysrc2012, nysrc2013, file='NYSReportCard/NYSReportCardCache.Rda')
 tools::resaveRdaFiles('NYSReportCard')
 
-##### For the NYSCharters Shiny App ############################################
+##### For the NYSEnrollment Shiny App ##########################################
 path <- 'Data/'
 nysenrollment <- list(
 	All=list(# All Students
@@ -82,4 +82,4 @@ for(gr in seq_along(nysenrollment)) {
 	nysenrollment[[gr]]$publics <- publics
 }
 
-save(nysenrollment, district.codes, grade.cols, file='NYSCharters/NYSEnrollment.Rda')
+save(nysenrollment, district.codes, grade.cols, file='NYSEnrollment/NYSEnrollment.Rda')

@@ -7,7 +7,7 @@ shiny::runApp('NYSEnrollment')
 
 # Or run from Github
 shiny::runGitHub('NYSchools','jbryer',subdir='NYSReportCard')
-shiny::runGitHub('NYSchools','jbryer',subdir='NYSCharters')
+shiny::runGitHub('NYSchools','jbryer',subdir='NYSEnrollment')
 
 # Data preparation. This will download some large data files from NYSED.gov
 # website and create Rdata files in each of the Shiny app directories.
