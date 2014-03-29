@@ -1,4 +1,3 @@
-
 if(!exists('nysrc2012') | !exists('nysrc2013')) {
 	if(exists('Data/NYSReportCardCache.Rda')) {
 		load('Data/NYSReportCardCache.Rda')
@@ -10,7 +9,6 @@ if(!exists('nysrc2012') | !exists('nysrc2013')) {
 		save(nysrc2012, nysrc2013, file='Data/NYSReportCardCache.Rda')
 	}	
 }
-
 
 schools <- unique(nysrc2013[[2]][,'NAME'])
 districts <- unique(nysrc2013[[2]][,'DISTRICT.N'])

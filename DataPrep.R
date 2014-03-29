@@ -15,6 +15,7 @@ nysrc2013 <- mdb.get('Data/2013ELAandMathDistrictandBuildingAggregatesCountyMedi
 
 # Will save the Rdata file in the Shiny App directory to make it self contained.
 save(nysrc2012, nysrc2013, file='NYSReportCard/NYSReportCardCache.Rda')
+tools::resaveRdaFiles('NYSReportCard')
 
 ##### For the NYSCharters Shiny App ############################################
 path <- 'Data/'

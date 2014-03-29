@@ -30,18 +30,18 @@ shinyServer(function(input, output) {
 		publics <- nysenrollment[[input$group]]$publics[,
 				c('District','DistrictName','SUBGROUP','SCHOOL.NAME','TOTAL.ENROLLMENT',grade.cols)]
 		if(input$group == 'Gender') {
-			charters <- charters[charters$SUBGROUP == input$gender,]
-			publics <- publics[publics$SUBGROUP == input$gender,]
+			charters <- charters[which(charters$SUBGROUP == input$gender),]
+			publics <- publics[which(publics$SUBGROUP == input$gender),]
 		}
 		if(input$group == 'Race') {
-			charters <- charters[charters$SUBGROUP == input$race,]
-			publics <- publics[publics$SUBGROUP == input$race,]
+			charters <- charters[which(charters$SUBGROUP == input$race),]
+			publics <- publics[which(publics$SUBGROUP == input$race),]
 		}
 		districtName <- 'All Districts'
 		if(!is.null(input$district)) {
 			if(input$district != 'All') {
-				charters <- charters[charters$District == input$district,]
-				publics <- publics[publics$District == input$district,]
+				charters <- charters[which(charters$District == input$district),]
+				publics <- publics[which(publics$District == input$district),]
 				districtName <- district.codes[district.codes$Code == input$district,'DistrictName']
 			}
 		}
@@ -90,17 +90,29 @@ shinyServer(function(input, output) {
 			levels(thedata.melted2$Grade) <- c('PreK', 'K', 1:12)
 			
 			if(input$grade == 'Elementary') {
-				p <- ggplot(thedata.melted2[thedata.melted2$Grade %in% c('PreK','K',1:5),], 
+				tmp <- thedata.melted2[thedata.melted2$Grade %in% c('PreK','K',1:5),]
+				tmp <- aggregate(tmp$Enrollment, by=list(tmp$School), FUN=sum)
+				tmp <- tmp[tmp$x > 0,]$Group.1
+				p <- ggplot(thedata.melted2[thedata.melted2$Grade %in% c('PreK','K',1:5) &
+												thedata.melted2$School %in% tmp,], 
 							aes(x=School, group=Charter, fill=Charter, y=Enrollment)) +
 					geom_bar(stat='identity', position='dodge') +
 					facet_wrap(~ Grade, nrow=1) + coord_flip()
 			} else if(input$grade == 'Middle') {
-				p <- ggplot(thedata.melted2[thedata.melted2$Grade %in% c(6:8),], 
+				tmp <- thedata.melted2[thedata.melted2$Grade %in% c(6:8),]
+				tmp <- aggregate(tmp$Enrollment, by=list(tmp$School), FUN=sum)
+				tmp <- tmp[tmp$x > 0,]$Group.1
+				p <- ggplot(thedata.melted2[thedata.melted2$Grade %in% c(6:8) &
+												thedata.melted2$School %in% tmp,], 
 							aes(x=School, group=Charter, fill=Charter, y=Enrollment)) +
 					geom_bar(stat='identity', position='dodge') +
 					facet_wrap(~ Grade, nrow=1) + coord_flip()
 			} else if(input$grade == 'High') {
-				p <- ggplot(thedata.melted2[thedata.melted2$Grade %in% c(9:12),], 
+				tmp <- thedata.melted2[thedata.melted2$Grade %in% c(9:12),]
+				tmp <- aggregate(tmp$Enrollment, by=list(tmp$School), FUN=sum)
+				tmp <- tmp[tmp$x > 0,]$Group.1
+				p <- ggplot(thedata.melted2[thedata.melted2$Grade %in% c(9:12) &
+												thedata.melted2$School %in% tmp,], 
 							aes(x=School, group=Charter, fill=Charter, y=Enrollment)) +
 					geom_bar(stat='identity', position='dodge') +
 					facet_wrap(~ Grade, nrow=1) + coord_flip()
@@ -118,7 +130,7 @@ shinyServer(function(input, output) {
 								groupName))
 		print(p)
 		
-	}, height=400, width=800)
+	}, height='auto', width='auto')
 	
 	output$summary <- renderTable({
 		thedata <- getData(input)

@@ -1,0 +1,12 @@
+New York State 2013 PreK-12 School Enrollments
+========================================================
+
+Author: Jason Bryer [jason@bryer.org](mailto:jason@bryer.org)  
+Website: [https://github.com/jbryer/NYSchools](https://github.com/jbryer/NYSchools)
+
+```{r setup, echo=FALSE, results='hide', warning=FALSE}
+source('../package.R')
+package(c('ggplot2','reshape2','psych','Hmisc','shiny','xtable'), update=TRUE)
+
+```
+

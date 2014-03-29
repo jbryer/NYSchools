@@ -1,5 +1,3 @@
-source('reportCard.R')
-
 require(shiny)
 require(shinyIncubator)
 require(ggplot2)
@@ -50,7 +48,7 @@ shinyUI(pageWithSidebar(
 	mainPanel(
 		tabsetPanel(
 			tabPanel("Plot",
-					 plotOutput("plot")
+					 plotOutput("plot", height='600px')
 			),
 			tabPanel("Summary",
 					 tableOutput('summary')),

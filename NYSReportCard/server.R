@@ -80,7 +80,7 @@ shinyServer(function(input, output) {
 		}
 		print(p)
 		
-	}, height=400, width=500)
+	}, height='auto', width='auto')
 	
 	output$model <- renderPrint({
 		rc <- getData(input)

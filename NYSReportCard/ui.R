@@ -11,7 +11,7 @@ shinyUI(pageWithSidebar(
 	sidebarPanel(
 		helpText(paste0('')),
 		selectInput(inputId = "subject", label = "Subject:",
-					choices = c('ELA', 'Math'), selected = 'ELA'),
+					choices = c('ELA', 'Math'), selected = 'Math'),
 		selectInput(input = 'grade', label = 'Grade:',
 					choices = 3:8, selected = 8),
 		radioButtons(input = 'outcome', label = 'Outcome:',
@@ -35,7 +35,7 @@ shinyUI(pageWithSidebar(
 	mainPanel(
 		tabsetPanel(
 			tabPanel("Plot",
-					 plotOutput("plot")
+					 plotOutput("plot", height='500px')
 			),
 			tabPanel("Model",
 					 verbatimTextOutput("model"),

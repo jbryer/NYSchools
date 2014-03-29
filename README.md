@@ -16,7 +16,7 @@ The purpose of this app is to explore the differences between traditional and ch
 To run this app from Github, type the following command in R:
 
 ```
-shiny::runGitHub('NYSchools','jbryer',subdir='NYSCharters')
+shiny::runGitHub('NYSchools','jbryer',subdir='NYSEnrollment')
 ```
 
 ![Screen Shot of NYSCharters Shiny App](Figures/NYSChartersScreen.png)

@@ -1,0 +1,149 @@
+Comparison of 2012 and 2013 ELA and Math Passing Rates for New York State
+========================================================
+
+Author: Jason Bryer [jason@bryer.org](mailto:jason@bryer.org)  
+Website: [https://github.com/jbryer/NYSchools](https://github.com/jbryer/NYSchools)
+
+```{r setup, echo=FALSE, results='hide', warning=FALSE}
+print(getwd())
+source('../package.R')
+package(c('ggplot2','reshape2','psych','Hmisc','shiny','xtable'), update=TRUE)
+load('../NYSReportCard/NYSReportCardCache.Rda')
+source('../NYSReportCard/reportCard.R')
+
+ela8 <- reportCard(subject='ELA', grade=8)
+ela8.cor <- cor.test(ela8$Pass2012, ela8$Pass2013)
+```
+
+In 2013 New York administered the first [Common Core State Standards](http://www.corestandards.org/) aligned English Language Arts (ELA) and math assessments to students in grades 3 through 8. The result of this was an almost universal drop in scores and passing rates. Two questions arose from these results: One, were the drops predictable? And two, were the drops between charter and traditional public schools the same? The implications of the latter are that, if charter schools were "teaching to the test" their drops would be greater than predicted. Using data for all public schools in New York, we can explore the relationship between school scores in 2012 (under the old curriculum) and 2013 (under the Common Core State Standards curriculum). 
+
+[Gary Rubinstein](http://garyrubinstein.teachforus.org/2013/08/09/driven-by-data/) initially analyzed this data and provided scatter plots for seventh grade math. Here we will explore the differences for both math and English Language Arts (ELA) for all grades assessed (grades 3 to 8). I will outline how the analysis was done using the eighth grade ELA results. At the end, a summary table of the results for both subjects across all grades is provided. Additionally, a [Shiny](http://rstudio.com/shiny) application was developed to explore the graphics, statistics, and data for each subject and grade. The source code and instructions for running the application locally is available on [Github](https://github.com/jbryer/NYSchools). You can also [click here](http://spark.rstudio.com/jbryer/NYSReportCard/) to view a hosted version (note that the availability of the application is not guaranteed).
+
+The figure below is a scatter plot showing the passing rates for 2012 on the <i>x</i>-axis and 2013 on the <i>y</i>-axis for each school in New York State. It is quite evident there is a relationship between the two scores. The correlation between the 2012 and 2013 passing rates is `r ela8.cor$estimate` and statistically significant (p < 0.001). However, the scatter plot reveals that the relationship is not quite linear. Two regression models are estimated, a linear model represented by the dashed blue line and a quadratic model represented by the solid green line.
+
+```{r, warning=FALSE, echo=FALSE}
+ggplot(ela8, aes(x=Pass2012, y=Pass2013)) + 
+	geom_point(data=ela8[!ela8$Charter,], aes(color=Charter), alpha=.3) + 
+	geom_point(data=ela8[ela8$Charter,], aes(color=Charter), alpha=1, size=2) + 
+	xlab('Percent Pass 2012') + ylab('Percent Pass 2013') + 
+	coord_equal() + 
+	xlim(c(0,100)) + ylim(c(0,100)) +
+	geom_smooth(method='lm', formula=y~x, fill=NA, color='darkblue', linetype=3) +
+	geom_smooth(method='lm', formula=y~poly(x,2,raw=TRUE), fill=NA, color='darkgreen', linetype=1) +
+	ggtitle('2012 vs 2013 Eighth Grade ELA')
+```
+
+What we wish to know is whether charter schools performed worse than traditional public schools. From the figure above we can see that many, perhaps even the majority, of charter schools are below the regression lines. One approach to determine whether charter schools had lower passing rates than would be expected is to examine the residuals, or the difference between the predicted values of the regression model and the actual observed value. Since the quadratic model fits the data better (both visually and by a larger R<sup>2</sup>), we will use the quadratic model here. Note that two tables below provide the results for all grades in math and ELA for both the linear and quadratic models.
+
+<hr>
+```{r, echo=FALSE, results='asis'}
+lm.out <- lm(Pass2013 ~ I(Pass2012 ^ 2), data=ela8, weights=ela8$TotalTested)
+print(xtable(lm.out, caption="Quadratic Regression Results for 7th Grade ELA"), type='html')
+ela8$resid <- resid(lm.out)
+t.out <- t.test(resid ~ Charter, data=ela8)
+```
+<hr>
+
+The mean residual for charter schools is `r t.out$estimate['mean in group TRUE']` and `r t.out$estimate['mean in group FALSE']` for traditional public schools with a difference of `r abs(diff(t.out$estimate))` (p = `r t.out$p.value`). Analyzing the residuals can be problematic since they are sensitive to the model fit. However, if the performance of charter and traditional public schools is the same, then the distributions of the residuals should be roughly the same. The tables below show that in most grades, charter schools preformed worse than would be expected. The figure below includes separate Loess regression lines (the grey band is an approximate 95% confidence interval) for charter and traditional public schools. What this shows is that much of the difference lies with those charter schools that scored highest in 2012.
+
+```{r, warning=FALSE, echo=FALSE}
+ggplot(ela8, aes(x=Pass2012, y=Pass2013, group=Charter)) + 
+	geom_point(data=ela8[!ela8$Charter,], aes(color=Charter), alpha=.3) + 
+	geom_point(data=ela8[ela8$Charter,], aes(color=Charter), alpha=1, size=2) + 
+	xlab('Percent Pass 2012') + ylab('Percent Pass 2013') + 
+	coord_equal() + 
+	xlim(c(0,100)) + ylim(c(0,100)) +
+	geom_smooth(method='loess', aes(color=Charter), fill='grey90') +
+	ggtitle('2012 vs 2013 Eighth Grade ELA')
+```
+
+
+```{r model, echo=FALSE, results='hide', warning=FALSE, error=FALSE, message=FALSE}
+tabout <- data.frame()
+for(subject in c('ELA','Math')) {
+	for(grade in 3:8) {
+		thedata <- reportCard(subject, grade)
+		
+		r <- cor(thedata[,'Pass2012'], thedata[,'Pass2013'])
+		lm.out <- lm(Pass2013 ~ Pass2012, data=thedata, weights=thedata[,'TotalTested'])
+		lm.sum <- summary(lm.out)
+		thedata$resid <- resid(lm.out)
+		t.out <- t.test(resid ~ Charter, data=thedata)
+		lm2.out <- lm(Pass2013 ~ I(Pass2012 ^ 2), data=thedata, weights=thedata[,'TotalTested'])
+		lm2.sum <- summary(lm2.out)
+		thedata$resid2 <- resid(lm2.out)
+		t2.out <- t.test(resid2 ~ Charter, data=thedata)
+		
+		tabout <- rbind(tabout, data.frame(
+			subject=subject, 
+			grade=grade, 
+			r=r, 
+			r.squared=lm.sum$r.squared,
+			public.resid=unname(t.out$estimate['mean in group FALSE']),
+			charter.resid=unname(t.out$estimate['mean in group TRUE']),
+			diff=unname(diff(t.out$estimate)),
+			p=t.out$p.value,
+			r.squared.quad=lm2.sum$r.squared,
+			public.resid.quad=unname(t2.out$estimate['mean in group FALSE']),
+			charter.resid.quad=unname(t2.out$estimate['mean in group TRUE']),
+			diff.quad=unname(diff(t2.out$estimate)),
+			p.quad=t2.out$p.value,
+			stringsAsFactors=FALSE))
+	}
+}
+tabout$stars <- ''
+tabout[tabout$p <= 0.05,]$stars <- '*'
+tabout[tabout$p <= 0.01,]$stars <- '**'
+tabout[tabout$p <= 0.001,]$stars <- '***'
+tabout$stars.quad <- ''
+tabout[tabout$p.quad <= 0.05,]$stars.quad <- '*'
+tabout[tabout$p.quad <= 0.01,]$stars.quad <- '**'
+tabout[tabout$p.quad <= 0.001,]$stars.quad <- '***'
+```
+
+
+<hr>
+```{r linearTable, echo=FALSE, results='asis'}
+tab.out <- tabout[,c('subject','grade','r','r.squared','public.resid','charter.resid','diff','stars','p')]
+xtab.out <- xtable(tab.out,
+				   caption=paste0('Results of Residual Differences between 2012 and 2013',
+				   			   ' ELA and Math Passing Rates using Linear Model'))
+addtorow <- list()
+addtorow$pos <- list()
+addtorow$pos[[1]] <- c(0)
+addtorow$pos[[2]] <- nrow(tab.out)
+addtorow$command <- c(paste0('<tr><td colspan=4 style="border-top:solid 2px #000000"></td>',
+							 '<td colspan=2 align="center" style="border-top:solid 2px #000000">Mean of Residuals</td>',
+							 '<td colspan=3 style="border-top:solid 2px #000000"></td></tr>',
+							 '<tr><td style="border-top:solid 2px #000000; border-bottom:solid 2px #000000">Subject</td>',
+							 '<td align="right" style="border-top:solid 2px #000000; border-bottom:solid 2px #000000">Grade</td>',
+							 '<td align="right" style="border-top:solid 2px #000000; border-bottom:solid 2px #000000">Correlation</td>',
+							 '<td align="right" style="border-top:solid 2px #000000; border-bottom:solid 2px #000000">R<sup>2</sup></td>',
+							 '<td align="right" style="border-top:solid 2px #000000; border-bottom:solid 2px #000000">Public</td>',
+							 '<td align="right" style="border-top:solid 2px #000000; border-bottom:solid 2px #000000">Charter</td>',
+							 '<td align="right" colspan=2 style="border-top:solid 2px #000000; border-bottom:solid 2px #000000">Difference</td>',
+							 '<td align="right" style="border-top:solid 2px #000000; border-bottom:solid 2px #000000"><i>p</i>-value</td></tr>'),
+							 '<tr><td colspan=9 style="border-top:solid 2px #000000"></td></tr>')
+print(xtab.out, caption.placement='top', type='html', add.to.row=addtorow,
+	  html.table.attributes="border=0", include.rownames=FALSE, include.colnames=FALSE)
+
+```
+<hr>
+
+
+
+<hr>
+```{r quadTable, echo=FALSE, results='asis'}
+tab2.out <- tabout[,c('subject','grade','r','r.squared.quad','public.resid.quad',
+		  'charter.resid.quad','diff.quad','stars.quad','p.quad')]
+
+xtab2.out <- xtable(tab.out,
+				   caption=paste0('Results of Residual Differences between 2012 and 2013',
+				   			   ' ELA and Math Passing Rates using Quadratic Model'))
+print(xtab2.out, caption.placement='top', type='html', add.to.row=addtorow,
+	  html.table.attributes="border=0", include.rownames=FALSE, include.colnames=FALSE)
+```
+<hr>
+
+
+
