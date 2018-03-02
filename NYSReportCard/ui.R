@@ -3,6 +3,7 @@ source('reportCard.R')
 require(shiny)
 require(shinyIncubator)
 require(ggplot2)
+require(markdown)
 
 shinyUI(pageWithSidebar(
 	# Application title
@@ -17,7 +18,7 @@ shinyUI(pageWithSidebar(
 		radioButtons(input = 'outcome', label = 'Outcome:',
 					 choices = c('Passing' = 'Pass',
 					 			 'Mean' = 'Mean'),
-					 selected='Passing'),
+					 selected='Pass'),
 		conditionalPanel(
 			"input.outcome == 'Pass'",
 			sliderInput(inputId='passlevel', label='Passing Threshold:',

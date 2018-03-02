@@ -2,6 +2,7 @@ require(shiny)
 require(shinyIncubator)
 require(ggplot2)
 require(reshape2)
+require(markdown)
 
 load('NYSEnrollment.Rda')
 
@@ -51,15 +52,10 @@ shinyUI(pageWithSidebar(
 	
 	mainPanel(
 		tabsetPanel(
-			tabPanel("Plot",
-					 plotOutput("plot", height='600px')
-			),
-			tabPanel("Summary",
-					 tableOutput('summary')),
-			tabPanel("Data",
-					 dataTableOutput("data")),
-			tabPanel("About",
-					 includeMarkdown('About.md'))
+			tabPanel("Plot", plotOutput("plot", height='600px')),
+			tabPanel("Summary", tableOutput('summary')),
+			tabPanel("Data", dataTableOutput("data")),
+			tabPanel("About", includeMarkdown('About.md'))
 		)
 	)
 ))
